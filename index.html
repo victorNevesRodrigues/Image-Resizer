@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="./assets/icon.svg" type="image/x-icon">
+    <title>Redimensione a Imagem</title>
+</head>
+<body>
+        <section class="explanation">
+            <h1>Redimensione a imagem</h1>
+            <p>Mude o tamanho de qualquer imagem<br> de acordo com a sua vontade e <br>faça o download da nova versão dela</p>
+        </section>
+
+        <section class="imageResize">
+            <div class="uploadImage">
+                <input type="file" accept="image/*" style="display: none;">
+                <img src="./assets/upload.svg" alt="">
+                <p>Procurar o Arquivo no Computador</p>
+            </div>
+
+            <div class="changeFile">
+
+                <div class="sizeChange">
+                    <div class="width">
+                        <label>Largura</label>
+                        <input type="number">
+                    </div>
+                    <div class="height">
+                        <label>Altura</label>
+                        <input type="number">
+                    </div>
+                </div>
+
+                <div class="checkBoxes">
+                    <div class="lockAspect">
+                        <input type="checkbox" id="ratio" checked>
+                        <label for="ratio">Travar a Proporção</label>
+                    </div>
+                    <div class="reduceQuality">
+                        <input type="checkbox" id="quality">
+                        <label for="quality">Reduzir a Qualidade</label>
+                    </div>
+                </div>
+
+            <button>BAIXAR IMAGEM</button>
+
+            </div>
+        </section>
+
+        <script src="./scripts.js"></script>
+</body>
+</html>

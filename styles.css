@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #a0c4ff;
+    flex-direction: column;
+    align-items: center;
+}
+
+.explanation {
+    width: 95%;
+    max-width: 51rem;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 0.5rem;
+}
+
+.explanation h1 {
+    font-size: 3rem;
+}
+
+.explanation p {
+    padding-top: 0.5rem;
+    font-size: 2rem;
+}
+
+.imageResize {
+    padding: 3rem;
+    background-color: #fff;
+    margin-top: 4rem;
+    border-radius: 1rem;
+}
+
+.uploadImage {
+    width: 45rem;
+    border: 2px dashed #bbb;
+    height: 22rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.uploadImage:hover {
+    border: 2px dashed #ffc6ff;
+}
+
+.active {
+    border: none;
+}
+
+.active:hover {
+    border: none;
+}
+
+.active p {
+    opacity: 0;
+}
+
+.active img {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+}
+
+img {
+    max-width: 20%;
+}
+
+p {
+    font-size: 1.5rem;
+    padding-top: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.changeFile {
+    margin-top: 3rem;
+}
+
+.sizeChange, .checkBoxes {
+    display: flex;
+}
+
+.sizeChange {
+    justify-content: space-between;
+}
+
+.width, .height {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.7rem;
+    font-size: 1.5rem;
+    width: calc(100% / 2 - 15px);
+}
+
+input {
+    height: 5rem;
+    outline: none;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #aaa
+}
+
+input:focus {
+    border: 1px solid #ffc6ff
+}
+
+.lockAspect, .reduceQuality {
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    width: calc(100% / 2 - 15px);
+    font-size: 1.5rem;
+}
+
+.checkBoxes {
+    justify-content: space-between;
+}
+
+button {
+    width: 100%;
+    padding: 1.5rem 0rem;
+    background-color: #ffc6ff;
+    border: none;
+    border-radius: 0.5rem;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-top: 1.6rem;
+}
+
+button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+#ratio, #quality {
+    accent-color: #ffc6ff;
+}
+
+.imageResize {
+    max-height: 28rem;
+    transition: height 0.5s ease;
+}
+
+.changeFile {
+    opacity: 0;
+}
+
+.activeContent {
+    max-height: 90rem;
+}
+
+.activeContent .changeFile {
+    transition: all 1s ease;
+    opacity: 1;
+}
+
+@media (max-width: 550px) {
+    .imageResize {
+        width: 95vw;
+    }
+
+    .uploadImage {
+        width: 100%;
+    }
+
+    .explanation h1 {
+        font-size: 2rem;
+    }
+    
+    .explanation p {
+        padding-top: 0.5rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .sizeChange, .checkBoxes {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .sizeChange input {
+        margin-bottom: 1rem;
+    }
+
+    .changeFile {
+        margin-top: 1rem;
+    }
+
+    .lockAspect, .reduceQuality {
+        width: initial;
+    }
+
+    .width, .height {
+        width: initial;
+    }
+
+    .imageResize {
+        padding: 1rem;
+        max-height: 24rem;
+        transition: height 0.5s ease;
+    }
+
+    .activeContent {
+        max-height: 90rem;
+    }
+}
